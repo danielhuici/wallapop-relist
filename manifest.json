@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Wallapop Relist",
+  "version": "1.0.0",
+  "description": "Automatically relist Wallapop items by deleting and recreating them.",
+  "permissions": [
+    "storage",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://api.wallapop.com/*",
+    "https://es.wallapop.com/*",
+    "https://cdn.wallapop.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://es.wallapop.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
