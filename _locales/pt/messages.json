@@ -1,0 +1,23 @@
+{
+  "appDesc": {
+    "message": "Republica os teus anúncios do Wallapop com um clique para voltarem ao topo."
+  },
+  "btnRelist": {
+    "message": "Republicar"
+  },
+  "btnRelisting": {
+    "message": "A republicar…"
+  },
+  "btnRelisted": {
+    "message": "Republicado!"
+  },
+  "btnError": {
+    "message": "Erro"
+  },
+  "errNoToken": {
+    "message": "Token de autenticação não encontrado. Tens sessão iniciada no Wallapop?"
+  },
+  "errUnknown": {
+    "message": "Erro desconhecido"
+  }
+}

@@ -30,7 +30,7 @@ async function getAuthHeaders(tokenFromPage) {
   log(`getAuthHeaders: no page token; found ${cookies.length} cookies on .wallapop.com`, cookies.map(c => c.name));
 
   if (!accessToken) {
-    throw new Error('No se encontró token de autenticación. ¿Estás logueado en Wallapop?');
+    throw new Error(chrome.i18n.getMessage('errNoToken'));
   }
 
   return {

@@ -1,11 +1,14 @@
 (() => {
   const RELIST_BTN_CLASS = 'wallapop-relist-btn';
 
+  // Localized string for the current browser language (see _locales/).
+  const t = (key) => chrome.i18n.getMessage(key);
+
   function createRelistButton(slug) {
     const btn = document.createElement('button');
     btn.className = RELIST_BTN_CLASS;
     btn.dataset.slug = slug;
-    btn.textContent = 'Resubir';
+    btn.textContent = t('btnRelist');
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -61,7 +64,7 @@
   async function handleRelist(btn, slug) {
     btn.disabled = true;
     btn.classList.add('wallapop-relist-btn--loading');
-    btn.textContent = 'Relistando...';
+    btn.textContent = t('btnRelisting');
 
     try {
       const accessToken = findPageAccessToken();
@@ -74,21 +77,21 @@
       if (response.success) {
         btn.classList.remove('wallapop-relist-btn--loading');
         btn.classList.add('wallapop-relist-btn--success');
-        btn.textContent = 'Relistado!';
+        btn.textContent = t('btnRelisted');
         setTimeout(() => location.reload(), 2000);
       } else {
-        throw new Error(response.error || 'Unknown error');
+        throw new Error(response.error || t('errUnknown'));
       }
     } catch (error) {
       console.error('[Wallapop Relist] relist failed:', error);
       btn.classList.remove('wallapop-relist-btn--loading');
       btn.classList.add('wallapop-relist-btn--error');
-      btn.textContent = 'Error';
+      btn.textContent = t('btnError');
       btn.title = error.message;
       setTimeout(() => {
         btn.disabled = false;
         btn.classList.remove('wallapop-relist-btn--error');
-        btn.textContent = 'Resubir';
+        btn.textContent = t('btnRelist');
         btn.title = '';
       }, 3000);
     }

@@ -1,0 +1,23 @@
+{
+  "appDesc": {
+    "message": "Resube tus anuncios de Wallapop con un simple click."
+  },
+  "btnRelist": {
+    "message": "Resubir"
+  },
+  "btnRelisting": {
+    "message": "Resubiendo…"
+  },
+  "btnRelisted": {
+    "message": "¡Resubido!"
+  },
+  "btnError": {
+    "message": "Error"
+  },
+  "errNoToken": {
+    "message": "No se encontró token de autenticación. ¿Estás logueado en Wallapop?"
+  },
+  "errUnknown": {
+    "message": "Error desconocido"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "appDesc": {
+    "message": "Republiez vos annonces Wallapop en un clic pour les remonter en tête."
+  },
+  "btnRelist": {
+    "message": "Republier"
+  },
+  "btnRelisting": {
+    "message": "Republication…"
+  },
+  "btnRelisted": {
+    "message": "Republié !"
+  },
+  "btnError": {
+    "message": "Erreur"
+  },
+  "errNoToken": {
+    "message": "Jeton d'authentification introuvable. Êtes-vous connecté à Wallapop ?"
+  },
+  "errUnknown": {
+    "message": "Erreur inconnue"
+  }
+}

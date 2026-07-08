@@ -12,13 +12,10 @@ grid.
 
 When you click **Resubir**, the extension:
 
-1. Reads your auth token from the page (`accessToken` cookie).
-2. Resolves the real item id from the page slug via `/api/v3/user/items`.
-3. Fetches the item's full details and downloads its images.
-4. **Creates the new item first** (first image inline, the rest via the
-   `picture2` endpoint).
-5. **Only then deletes the original** — so a failure never loses your listing;
-   at worst you get a temporary duplicate.
+
+1. Fetches the item's full details and downloads its images.
+4. Creates the new item first
+5. Deletes the original
 
 ## Install (unpacked)
 
@@ -36,6 +33,12 @@ to `manifest.json` require removing and re-adding the extension.
 - `cookies` + host access to `*.wallapop.com` — to read the auth token and call
   the API on your behalf.
 - `cdn.wallapop.com` — to download the item images (cross-origin) for re-upload.
+
+## Languages
+
+The button and messages follow the browser's language. English (default),
+Spanish, Italian, Portuguese and French are bundled under `_locales/`; add a
+folder there to support more.
 
 ## Disclaimer
 

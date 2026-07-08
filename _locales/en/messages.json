@@ -1,0 +1,23 @@
+{
+  "appDesc": {
+    "message": "Relist your Wallapop items with one click to bump them back to the top."
+  },
+  "btnRelist": {
+    "message": "Relist"
+  },
+  "btnRelisting": {
+    "message": "Relisting…"
+  },
+  "btnRelisted": {
+    "message": "Relisted!"
+  },
+  "btnError": {
+    "message": "Error"
+  },
+  "errNoToken": {
+    "message": "Auth token not found. Are you logged in to Wallapop?"
+  },
+  "errUnknown": {
+    "message": "Unknown error"
+  }
+}
