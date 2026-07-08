@@ -12,21 +12,25 @@ grid.
 
 When you click **Resubir**, the extension:
 
+1. Reads your auth token from the page and finds the item's real id.
+2. Fetches the item's full details and downloads its images.
+3. **Creates the new item first** (with its original data and photos).
+4. **Only then deletes the original** — so a failure never loses your listing;
+   at worst you get a temporary duplicate.
 
-1. Fetches the item's full details and downloads its images.
-4. Creates the new item first
-5. Deletes the original
+## Install
 
-## Install (unpacked)
+1. Download the latest `wallapop-relist-vX.Y.Z.zip` from the
+   [**Releases**](https://github.com/danielhuici/wallapop-relist/releases/latest)
+   page and unzip it.
+2. Open `chrome://extensions` in Chrome.
+3. Turn on **Developer mode** (top-right toggle).
+4. Click **Load unpacked** and select the unzipped folder.
+5. Open Wallapop (logged in) and click the **Resubir** button on any of your
+   items.
 
-1. Clone or download this repo.
-2. Go to `chrome://extensions`.
-3. Enable **Developer mode**.
-4. Click **Load unpacked** and select this folder.
-5. Open Wallapop (logged in) and use the **Resubir** button.
-
-After editing any file, reload the extension from `chrome://extensions`. Changes
-to `manifest.json` require removing and re-adding the extension.
+To update later, download the newer release and repeat. To remove it, use the
+**Remove** button on its card in `chrome://extensions`.
 
 ## Permissions
 
